@@ -17,8 +17,8 @@ def main():
 
     template = f"<s>[INST] You are a developer who is working\
         on a project and wants to push his work to a git repository.\
-        Write a commit message, this is the git diff --cached result:\
-        ```{commit_message}```[/INST]</s>"
+        Write a one-line commit message, this is the git diff --cached result:\
+        ```{git_diff}```[/INST]</s>"
 
     url = "http://localhost:8080/completion"
     headers = {"Content-Type": "application/json"}
@@ -39,9 +39,10 @@ def main():
         commit_message = response_data['content'].replace('\n', '')
         commit_message = commit_message.replace('<s>', '')
         commit_message = commit_message.replace('</s>', '')
+        commit_message = commit_message.replace('<br>', '')
         commit_message = commit_message.replace('"', '')
         
-        # subprocess.call(['git', 'commit', '-m', cleaned_message])
+        subprocess.call(['git', 'commit', '-m', commit_message])
 
         print(f'git commit -m "{commit_message}"')
 
