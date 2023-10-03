@@ -41,6 +41,7 @@ def main():
         commit_message = commit_message.replace('</s>', '')
         commit_message = commit_message.replace('<br>', '')
         commit_message = commit_message.replace('"', '')
+        commit_message = commit_message.replace('`', '')
         
         subprocess.call(['git', 'commit', '-m', commit_message])
 
