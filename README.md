@@ -1,9 +1,14 @@
-<center>
-    <p style="font-size: 42px; color: white; padding: 20px;">LLM CMD</p>
-    <p>LLM CMD is a toolbox allowing you to use LLM in daily developer commands.</p>
-</center>
+# 👨🏼‍💻 LLM CMD
 
-## Fun Fact
+<p align="center">
+    <a href="https://github.com/psf/black"><img alt="Code style: black" src="https://img.shields.io/badge/code%20style-black-000000.svg"></a>
+</p>
+
+<p align="center">
+    ✨ LLM CMD is a toolbox allowing you to use LLM in daily developer commands 💻
+</p>
+
+## Fun Facts
 
 • This readme was largely generated with `cmd/readme.py`.
 
