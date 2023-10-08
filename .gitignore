@@ -1,0 +1,4 @@
+hfdownloader
+llama.cpp
+models/*
+!models/.gitkeep

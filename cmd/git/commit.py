@@ -18,11 +18,13 @@ def main():
 
     commit_message = "\n".join(changed_lines)
 
-    template = f"<s>[INST] You are a developer who is working \
-        on a project and wants to push his work to a git repository. \
-        Write a one-line commit message, this is the `git diff --cached` command result: \
-        ```{git_diff}```[/INST]</s>"
-    
+    template = f"<s>[INST] You are a software developer currently working on a project. \
+        You have made several changes to the codebase and are now ready to commit your work to a Git repository. \
+        The changes you've made can be seen in the output of the git `diff --cached command`, which displays \
+        the differences between the staged changes and the previous commit. Write a concise, informative, and \
+        well-structured one-line commit message that accurately summarizes the changes you are about to push to \
+        the repository based on the following `git diff --cached` output: ```{git_diff}```[/INST]</s>"
+
     url = "http://localhost:8080/completion"
     headers = {"Content-Type": "application/json"}
     data = {"prompt": template, "n_predict": 150}

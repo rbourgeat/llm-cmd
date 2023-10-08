@@ -1,25 +1,38 @@
-# 👨🏼‍💻 LLM CMD
+<p align="center" width="100%">
+<img src="./assets/llm-cmd-logo.jpeg" alt="Vigogne" style="width: 40%; min-width: 300px; display: block; margin: auto;">
+</p>
 
 <p align="center">
-    <a href="https://github.com/psf/black"><img alt="Code style: black" src="https://img.shields.io/badge/code%20style-black-000000.svg"></a>
+    <img alt="Python" src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54">
+    <img alt="Docker" src="https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white">
 </p>
 
 <p align="center">
     ✨ LLM CMD is a toolbox allowing you to use LLM in daily developer commands 💻
 </p>
 
-## Fun Facts
+## 🤗 Fun Facts
 
 • This readme was largely generated with `cmd/readme.py`.
 
 • All commit messages were generated with `cmd/git/commit.py`.
 
-## Table of commands
+## 📚 Table of commands
 
 - 📝 [readme](#readme)
 - 🚀 [git commit](#git-commit)
 
-## readme
+## 🎬 Setup
+
+Execute the following command:
+
+```bash
+make
+```
+
+It will download the [Hugging Face](https://huggingface.co/) model (you can change it in the top of the `Makefile`) and run it with llama.cpp server.
+
+## 📝 readme
 
 This is a Python script that generates a README.md file based on user input and a file path provided as an argument. The script uses the `requests` library to interact with an API endpoint that generates the README content, and writes it to a local README file.
 
@@ -43,7 +56,7 @@ The `cmd/readme.py` script performs the following tasks:
 4. Sends a POST request to a pre-trained language model API (http://localhost:8080/completion) with the generated template as input. The API generates completion prompts based on the template, which are then written to the README.md file.
 5. If the generated prompt is empty, the script calls itself recursively with the original command-line arguments to continue generating prompts until a non-empty prompt is obtained.
 
-## git commit
+## 🚀 git commit
 
 This script is a simple command-line tool that helps you write commit messages for your Git repository using an artificial intelligence (AI) completion system. The AI system generates completion suggestions based on the commit message prompt provided by the user.
 
