@@ -17,10 +17,13 @@
 
 • All commit messages were generated with `cmd/git/commit.py`.
 
+• All code comments were generated with `cmd/comment.py`
+
 ## 📚 Table of commands
 
 - 📝 [readme](#readme)
 - 🚀 [git commit](#git-commit)
+- 💭 [comment](#comment)
 
 ## 🎬 Setup
 
@@ -76,4 +79,16 @@ python3 cmd/git/commit.py
 4. Now you can execute the following command for push:
 ```bash
 git push
+```
+
+## 💭 comment
+
+This script is a simple Python script that takes a file path as an argument and attempts to add comments to the code within it. The script uses an API endpoint to generate completion suggestions for comments and replaces any lines that match the specified comment pattern with empty strings.
+
+### Usage
+
+To use this script, run it from the command line with the path to the file you want to add comments to as an argument:
+
+```sh
+python3 cmd/comment.py /path/to/your/file.py
 ```
